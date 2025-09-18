@@ -1,0 +1,19 @@
+.ourservices{
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: -800px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.ourservices p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500px;
+    color: gainsboro;
+    max-width: 600px;
+    margin: 20px auto 0 auto;
+    font-size: 30px;
+    line-height: 2;
+    text-align: center;
+}
