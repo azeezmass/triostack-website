@@ -1,89 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRIOstack</title>
-    <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="interface.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRIOstack</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="interface.css" />
+  <link rel="stylesheet" href="stars.css" />
+</head>
+<body>
+
+  <!-- Starry background canvas -->
+  <canvas id="stars"></canvas>
+
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
-      <img src="assets\IMG_5846.JPEG.jpg" alt="TrioStack Logo" />
+      <img src="assets/IMG_5846.JPEG.jpg" alt="TrioStack Logo" />
       <span>TrioStack</span>
     </div>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <button class="quote-button">Get Quote</button>
-</nav>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="quote-button">Get Quote</button>
+  </nav>
 
-    <section
-      style="
-        height: 100vh;
-        border: 1px solid black;
-        text-align: center;
-        font-size: 50px;
-      "
-    >
-      SECTION 1
-      <div class ="interface">
-     <h1>Build Your <br>
-               Dream Website <br>
-With TrioStack  </h1>
-     
-     <br>
-     <p>We create stunning, modern websites that drive results. From concept to launch, we handle everything with cutting-edge design and advanced technology.</p>
-     <button>Start Your Project</button>
-      </div>
-    >
-      SECTION 2
-    </section>
-    <section
-      style="
-        height: 100vh;
-        border: 1px solid black;
-        text-align: center;
-        font-size: 50px;
-      "
-    >
-      SECTION 3
-    </section>
-    <section
-      style="
-        height: 100vh;
-        border: 1px solid black;
-        text-align: center;
-        font-size: 50px;
-      "
-    >
-      SECTION 4
-    </section>
-    <section
-      style="
-        height: 100vh;
-        border: 1px solid black;
-        text-align: center;
-        font-size: 50px;
-      "
-    >
-      SECTION 5
-    </section>
-    <footer
-      style="
-        border: 1px solid black;
-        border-top: none;
-        height: 100px;
-        text-align: center;
-        font-size: 50px;
-      "
-    >
-      FOOTER
-    </footer>
-  </body>
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="interface">
+      <h1>
+        Build Your Dream Website <br>
+            With TrioStack
+      </h1>
+      <br>
+      <p>
+        We craft high-impact, modern websites that combine elegant design with advanced technology to deliver measurable results.
+      </p>
+      <button class="primary-btn">Start Your Project</button>
+    </div>
+  </section>
+
+  <!-- Other Sections -->
+  <section id="services" class="content-section">SECTION 2</section>
+  <section id="pricing" class="content-section">SECTION 3</section>
+  <section id="about" class="content-section">SECTION 4</section>
+  <section id="contact" class="content-section">SECTION 5</section>
+
+  <footer class="footer">FOOTER</footer>
+
+  <!-- Stars Animation -->
+  <script src="stars.js"></script>
+</body>
 </html>

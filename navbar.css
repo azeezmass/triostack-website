@@ -4,8 +4,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: linear-gradient(to right, #e2e2e2, #d3cce3);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(0,0,0,0.4);  /* translucent so stars show through */
+  backdrop-filter: blur(6px);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -26,7 +26,7 @@
 .logo span {
   font-size: 20px;
   font-weight: 600;
-  color: #5f27cd;
+  color: #fff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -39,19 +39,19 @@
 
 .nav-links li a {
   text-decoration: none;
-  color: #333;
+  color: #fff;
   font-weight: 500;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #7f00ff;
+  color: #9b4dff;
 }
 
 /* Get Quote Button */
 .quote-button {
-  background-color: white;
+  background-color: #fff;
   color: #7f00ff;
   border: none;
   padding: 10px 18px;
@@ -59,7 +59,6 @@
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 

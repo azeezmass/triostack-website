@@ -1,15 +1,35 @@
 .interface {
+  color: white;
   text-align: left;
   font-size: 35px;
-  margin-top: -50px;      /* space above, center horizontally */
-  margin-left: 50px;    /* space to the left */
+  margin-top: -50px;
+  margin-left: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
 .interface p {
-  max-width: 400px;          /* keeps text from stretching too wide */
-  margin-top: -50px;        /* space above, center horizontally */
-  font-size: 1.1rem;          /* readable size */
-  line-height: 2;           /* comfortable spacing between lines */
-  color: black;             /* light gray text for dark backgrounds */
-  text-align: left;         /* center the paragraph text */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  color: gainsboro;
+  max-width: 500px;
+  margin-top: -20px;
+  font-size: 1.1rem;
+  line-height: 2;
+  text-align: left;
+}
+
+.primary-btn {
+  margin-top: 20px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #6a0dad;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.primary-btn:hover {
+  background: #9b4dff;
 }

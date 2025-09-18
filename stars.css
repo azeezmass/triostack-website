@@ -1,0 +1,67 @@
+/* Reset & ensure full viewport size */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;   /* no horizontal scroll bar */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & Sections transparent so stars show through */
+body,
+.content-section,
+.footer {
+  background: transparent;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+
+/* Full-screen star canvas */
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;   /* full viewport width */
+  height: 100vh;  /* full viewport height */
+  background: black;
+  z-index: 0;
+}
+
+/* Make sure page content sits above the canvas */
+body > *:not(#stars) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Generic sections */
+.content-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
