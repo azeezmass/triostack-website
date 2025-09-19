@@ -1,10 +1,11 @@
 /* Reset & ensure full viewport size */
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;   /* no horizontal scroll bar */
+  overflow-x: hidden; /* no horizontal scroll bar */
 }
 
 * {
@@ -18,7 +19,7 @@ body,
 .content-section,
 .footer {
   background: transparent;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #fff;
 }
 
@@ -27,14 +28,15 @@ body,
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;   /* full viewport width */
-  height: 100vh;  /* full viewport height */
+  width: 100vw;
+  height: 100vh;
   background: black;
-  z-index: 0;
+  z-index: -1; /* keep behind everything */
+  pointer-events: none; /* allow clicks through canvas */
 }
 
 /* Make sure page content sits above the canvas */
-body > *:not(#stars) {
+body > *:not(#stars):not(.navbar) {
   position: relative;
   z-index: 1;
 }
