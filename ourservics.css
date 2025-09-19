@@ -1,0 +1,86 @@
+/* Container */
+.container {
+  max-width: 1240px;
+  width: 90%;
+  margin: auto;
+}
+
+/* Services Section */
+.our-services {
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Heading */
+.our-services-heading h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+/* Card Wrapper */
+.service-card-wrap {
+  width: 100%;
+}
+
+/* Flex container for cards */
+.service-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Each card */
+.cards {
+  flex: 1 1 350px; /* grows nicely, min 350px */
+  max-width: 400px; /* allow larger cards */
+  min-height: 450px; /* slightly taller */
+  display: flex;
+  flex-direction: column; /* stack contents vertically */
+  align-items: center;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Hover effect */
+.cards:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Animation inside card */
+.service-cards dotlottie-wc {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 20px auto;
+  flex-shrink: 0; /* prevent stretching */
+  scale: 2;
+}
+
+/* Card Title */
+.service-cards h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Card Text */
+.service-cards p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: justify;
+  margin-top: auto; /* keeps spacing clean */
+}
