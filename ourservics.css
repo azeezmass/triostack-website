@@ -40,7 +40,7 @@
 .cards {
   flex: 1 1 350px; /* grows nicely, min 350px */
   max-width: 400px; /* allow larger cards */
-  min-height: 450px; /* slightly taller */
+  /* min-height: 450px; slightly taller */
   display: flex;
   flex-direction: column; /* stack contents vertically */
   align-items: center;
@@ -51,6 +51,7 @@
   color: #fff;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 /* Hover effect */
@@ -61,26 +62,28 @@
 }
 
 /* Animation inside card */
-.service-cards dotlottie-wc {
-  width: 140px;
-  height: 140px;
-  margin: 0 auto 20px auto;
+.service-cards iframe {
+  width: 320px;
+  height: 250px;
   flex-shrink: 0; /* prevent stretching */
-  scale: 2;
+  overflow: hidden;
+  border: none;
 }
+*/
 
 /* Card Title */
-.service-cards h1 {
+.cards h1 {
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 /* Card Text */
-.service-cards p {
+.cards p {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.6;
   text-align: justify;
-  margin-top: auto; /* keeps spacing clean */
+  margin-top: 20px;
+  color: lightgray;
 }
