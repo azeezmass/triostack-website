@@ -81,7 +81,7 @@
   font-size: 16px;
   font-weight: 200;
   line-height: 1.6;
-  text-align: justify;
+  text-align: left;
   margin-top: 20px;
   color: lightgray;
 }
@@ -90,7 +90,7 @@
 .cards h1 .word,
 .cards p .word {
   /* This is the initial "faded" state */
-  opacity: 0.3; 
+  opacity: 0.3;
   transform: translateY(0);
   transition: opacity 0.8s ease, transform 0.8s ease;
   display: inline-block;
@@ -102,3 +102,4 @@
   opacity: 1;
   transform: translateY(0);
 }
+

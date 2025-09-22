@@ -6,7 +6,7 @@
   box-sizing: border-box;
   font-family: poppins, sans-serif;
 }
-html{
+html {
   scroll-behavior: smooth;
-
+  scroll-padding-top: 10px;
 }
