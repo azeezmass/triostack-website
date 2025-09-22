@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="interface.css" />
     <link rel="stylesheet" href="stars.css" />
     <link rel="stylesheet" href="seturn.css" />
-    <link rel="stylesheet" href="service.css" />
+  
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="ourservics.css" />
     <link rel="stylesheet" href="ourprocess.css" />
+    <link rel="stylesheet" href="price.css" />
   </head>
   <body>
     <!-- Starry background canvas -->
@@ -154,6 +155,59 @@
     </div>
 </section>
 
+<section>
+  <section class="pricing">
+  <h2 class="pricing-title">Our Pricing Plans</h2>
+  <div class="pricing-cards">
+    
+    <!-- Starter -->
+    <div class="card">
+      <h3>🚀 Starter</h3>
+      <p class="price">₹12,000 - ₹15,000</p>
+      <ul>
+        <li>Responsive Modern Website</li>
+        <li>Up to 5 Pages</li>
+        <li>Basic Animations</li>
+        <li>Delivery: 1–2 weeks</li>
+      </ul>
+      <button>Choose Plan</button>
+    </div>
+
+    <!-- Pro -->
+    <div class="card featured">
+      <h3>🛸 Pro</h3>
+      <p class="price">₹25,000 - ₹35,000</p>
+      <ul>
+        <li>Advanced Animations</li>
+        <li>Custom UI/UX</li>
+        <li>CMS Integration</li>
+        <li>Delivery: 2–4 weeks</li>
+      </ul>
+      <button>Choose Plan</button>
+    </div>
+
+    <!-- Elite -->
+    <div class="card">
+      <h3>🌌 Elite</h3>
+      <p class="price">₹50,000+</p>
+      <ul>
+        <li>3D Animated Website</li>
+        <li>Full Customization</li>
+        <li>Priority Support</li>
+        <li>Delivery: 4–6 weeks</li>
+      </ul>
+      <button>Choose Plan</button>
+    </div>
+
+  </div>
+  
+  <!-- Stars Background -->
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+</section>
+
+</section>
 
 
 
@@ -174,5 +228,59 @@
       src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.1/dist/dotlottie-wc.js"
       type="module"
     ></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const serviceCards = document.querySelectorAll(".cards");
+
+    serviceCards.forEach((card) => {
+      const textElements = card.querySelectorAll("h1, p");
+
+      textElements.forEach((el) => {
+        const letters = el.textContent.trim().split('');
+        el.textContent = '';
+        
+        letters.forEach((letter, index) => {
+          const letterSpan = document.createElement("span");
+          
+          if (letter === ' ') {
+            letterSpan.innerHTML = '&nbsp;';
+          } else {
+            letterSpan.textContent = letter;
+          }
+          
+          letterSpan.classList.add("word");
+          el.appendChild(letterSpan);
+        });
+      });
+    });
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          target.classList.add("is-visible");
+          
+          const letters = target.querySelectorAll(".word");
+          letters.forEach((letter, index) => {
+            letter.style.transitionDelay = `${index * 0.015}s`;
+          });
+
+          observer.unobserve(target);
+        }
+      });
+    }, observerOptions);
+
+    serviceCards.forEach((card) => {
+      observer.observe(card);
+    });
+  });
+</script>
   </body>
 </html>

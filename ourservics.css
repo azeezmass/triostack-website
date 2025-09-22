@@ -38,11 +38,10 @@
 
 /* Each card */
 .cards {
-  flex: 1 1 350px; /* grows nicely, min 350px */
-  max-width: 400px; /* allow larger cards */
-  /* min-height: 450px; slightly taller */
+  flex: 1 1 350px;
+  max-width: 400px;
   display: flex;
-  flex-direction: column; /* stack contents vertically */
+  flex-direction: column;
   align-items: center;
   padding: 30px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -65,11 +64,10 @@
 .service-cards iframe {
   width: 320px;
   height: 250px;
-  flex-shrink: 0; /* prevent stretching */
+  flex-shrink: 0;
   overflow: hidden;
   border: none;
 }
-*/
 
 /* Card Title */
 .cards h1 {
@@ -86,4 +84,21 @@
   text-align: justify;
   margin-top: 20px;
   color: lightgray;
+}
+
+/* Animation Styles */
+.cards h1 .word,
+.cards p .word {
+  /* This is the initial "faded" state */
+  opacity: 0.3; 
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  display: inline-block;
+}
+
+.cards.is-visible h1 .word,
+.cards.is-visible p .word {
+  /* This is the final "fully visible" state */
+  opacity: 1;
+  transform: translateY(0);
 }

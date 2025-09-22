@@ -1,0 +1,148 @@
+/* Pricing Section */
+.pricing {
+  text-align: center;
+  padding: 100px 20px;
+  background: black;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.pricing-title {
+  font-size: 40px;
+  margin-bottom: 60px;
+  color: #fff;
+  text-shadow: 0 0 20px #6f42c1, 0 0 40px #00d9ff;
+  position: relative;
+  z-index: 2;
+}
+
+/* Stars Background */
+.stars, .stars2, .stars3 {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: transparent;
+  z-index: 0;
+  animation: starMove linear infinite;
+  pointer-events: none;
+}
+
+.stars::after, .stars2::after, .stars3::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow:
+    1000px 300px white,
+    500px 800px white,
+    1200px 600px white,
+    800px 100px white,
+    200px 500px white;
+}
+
+.stars2::after {
+  width: 1.5px; height: 1.5px;
+  box-shadow:
+    400px 1000px white,
+    900px 400px white,
+    700px 700px white,
+    1300px 200px white,
+    600px 900px white;
+  animation-duration: 120s;
+}
+
+.stars3::after {
+  width: 1px; height: 1px;
+  box-shadow:
+    200px 600px white,
+    800px 300px white,
+    1000px 900px white,
+    1500px 500px white;
+  animation-duration: 150s;
+}
+
+@keyframes starMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-50%, -50%); }
+}
+
+/* Cards Layout */
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+/* Card Style */
+.card {
+  background: rgba(20, 20, 30, 0.95);
+  border-radius: 25px;
+  padding: 100px;
+  max-width: 350px;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.2);
+  position: relative;
+  transform: translateY(0) rotate(0deg);
+}
+
+/* Card Neon Glow Animation */
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0,217,255,0.2), transparent 70%);
+  transform: rotate(45deg);
+  z-index: -1;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.card:hover::before {
+  opacity: 1;
+  transform: rotate(0deg) scale(1.1);
+}
+
+/* Hover Interaction */
+.card:hover {
+  transform: translateY(-15px) scale(1.07) rotate(-1deg);
+  box-shadow: 0 0 50px #00d9ff, 0 0 80px #6f42c1;
+  border: 2px solid #00d9ff;
+}
+
+/* Featured Plan */
+.featured {
+  transform: scale(1.1);
+  border: 2px solid #8a2be2;
+  box-shadow: 0 0 60px #8a2be2, 0 0 100px #00d9ff;
+}
+
+/* Card Content */
+.card h3 { font-size: 24px; margin-bottom: 15px; color: #00d9ff; }
+.card .price { font-size: 26px; font-weight: bold; margin-bottom: 20px; }
+.card ul { list-style: none; padding: 0; margin-bottom: 20px; }
+.card ul li { margin: 10px 0; font-size: 15px; color: #ccc; }
+.card button {
+  background: linear-gradient(90deg, #00d9ff, #8a2be2);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.card button:hover {
+  background: linear-gradient(90deg, #8a2be2, #00d9ff);
+  transform: scale(1.1);
+}
